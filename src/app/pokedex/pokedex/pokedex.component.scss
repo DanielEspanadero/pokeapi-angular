@@ -1,0 +1,89 @@
+#pokedex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  .pokemon-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    margin: 2rem;
+    border-radius: 1rem;
+    width: 220px;
+    height: 285px;
+    text-align: center;
+    box-shadow:
+    0 1.6px 1.6px rgba(0, 0, 0, 0.023),
+    0 3.8px 3.8px rgba(0, 0, 0, 0.034),
+    0 6.9px 6.9px rgba(0, 0, 0, 0.041),
+    0 11.4px 11.4px rgba(0, 0, 0, 0.049),
+    0 18.8px 18.8px rgba(0, 0, 0, 0.056),
+    0 32.8px 32.8px rgba(0, 0, 0, 0.067),
+    0 71px 71px rgba(0, 0, 0, 0.09);
+    transition: all 0.2s ease-in-out;
+    .poke-id{
+        border-radius: 2rem;
+          padding: 0.6rem 0.6rem;
+          background-color: rgba(255, 255, 255, 0.3);
+    }
+    .pokemon-img{
+      width: 70%;
+    }
+    }
+  .rock {
+   background: linear-gradient(to bottom, #313030, #817c7c);
+  }
+  .electric {
+    background: linear-gradient(to bottom, #6d640b, #fff200);
+  }
+  .bug {
+    background: linear-gradient(to bottom, #6a762d, #cdfe0a);
+  }
+  .poison {
+    background: linear-gradient(to bottom, #5c0c8a, #bf68e1);
+  }
+  .normal {
+    background: linear-gradient(to bottom, #656565, #ffffff);
+  }
+  .fairy {
+    background: linear-gradient(to bottom, #490339, #ff00f7);
+  }
+  .fire {
+    background: linear-gradient(to bottom, #5d310d, #ff6a00);
+  }
+  .grass {
+    background: linear-gradient(to bottom, #30762d, #12fe0a);
+  }
+  .water {
+    background: linear-gradient(to bottom, #16386f, #00b3ff);
+  }
+  .ground{
+    background: linear-gradient(to bottom, #623600, #ba7937);
+  }
+  .fighting{
+    background: linear-gradient(to bottom, #373027, #b88757);
+  }
+  .psychic{
+    background: linear-gradient(to bottom, #2a0026, #c519ae);
+  }
+  .ice{
+    background: linear-gradient(to bottom, #004754, #02b7ff99);
+  }
+  .dragon{
+    background: linear-gradient(to bottom, #000000, #ff9900);
+  }
+  .dark{
+    background: linear-gradient(to bottom, #000000, #5d4176);
+  }
+  .steel{
+    background: linear-gradient(to bottom, #323338, #7a7575);
+  }
+  .ghost{
+    background: linear-gradient(to bottom, #3e1a46, #ff00b7);
+  }
+  .flying{
+    background: linear-gradient(to bottom, #2c4d63, #a4e8ff);
+  }
+}

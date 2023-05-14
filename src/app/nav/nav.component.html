@@ -1,0 +1,20 @@
+<nav id="nav">
+  <div id="logo-container">
+    <a routerLink="/" routerLinkActive="active" >
+    <img id="logo" src="assets/pokemon-logo.png" alt="pokemon logo" />
+    </a>
+  </div>
+  <ul id="links-container">
+    <li class="link">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+        >Inicio</a
+      >
+    </li>
+    <li class="link">
+      <a routerLink="/pokedex" routerLinkActive="active">Pokedex</a>
+    </li>
+    <li class="link">
+      <a routerLink="/history" routerLinkActive="active">Historia</a>
+    </li>
+  </ul>
+</nav>

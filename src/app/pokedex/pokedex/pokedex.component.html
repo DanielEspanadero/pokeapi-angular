@@ -1,0 +1,21 @@
+<div id="pokedex">
+  <div class="pokemon-card" *ngFor="let pokemon of pokemonList" [ngClass]="pokemon.types[0].type.name">
+    <h4 class="poke-id">#{{ pokemon.id }}</h4>
+    <img class="pokemon-img" [src]="pokemon.sprites.front_default" alt="{{ pokemon.name }}" />
+    <h3>{{ pokemon.name }}</h3>
+    <h3 *ngFor="let type of pokemon.types">{{ type.type.name }}</h3>
+    <!-- Aquí puedes agregar más detalles sobre cada Pokémon -->
+  </div>
+</div>
+
+<div class="pagination">
+  <button (click)="previousPage()" [disabled]="offset === 0">Anterior</button>
+  <span>Página {{ (offset / limit) + 1 }} de {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="offset + limit >= totalPokemon">Siguiente</button>
+</div>
+
+<div class="page-buttons">
+  <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)">
+    {{ i + 1 }}
+  </button>
+</div>
