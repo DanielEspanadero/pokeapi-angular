@@ -11,3 +11,44 @@
   height: 100%;
   object-fit: cover;
 }
+
+.animation-container {
+  white-space: nowrap;
+  overflow: hidden;
+  position: fixed;
+  background-color: #fff;
+}
+
+.logo-container {
+  display: inline-block;
+  animation: move 700s linear infinite;
+  height: 3rem;
+}
+
+.logo-text {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.logo-text img {
+  height: 25px;
+  margin-left: 9px;
+}
+
+.logo-text span {
+  display: inline-block;
+}
+
+.logo-text::before {
+  content: '⭐️';
+  font-size: 20px;
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+@keyframes move {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}

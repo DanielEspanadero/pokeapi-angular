@@ -39,13 +39,16 @@
       width: 100%;
       width: 33%;
       height: 464px;
-          display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       .game-image {
         width: 90%;
         border-radius: 1rem;
+      }
+      .special {
+        width: 60%;
       }
     }
   }

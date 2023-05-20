@@ -1,15 +1,15 @@
-$nav-height: 20vh;
+$nav-height: 12vh;
 $nav-width: 100%;
-$logo-margin-top: 1%;
+$logo-margin-top: 1.7%;
 $logo-margin-left: 2rem;
 $link-margin: 50px;
 $link-font-size: 2rem;
-$logo-height: 90%;
+$logo-height: 70%;
 $mobile-logo-height: 50%;
 
 #nav {
   position: sticky;
-  top: 0;
+  top: 3rem;
   background-color: #fff;
   display: flex;
   flex-direction: row;

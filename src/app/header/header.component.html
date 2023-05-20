@@ -1,3 +1,13 @@
+<div class="animation-container">
+  <div class="logo-container">
+    <div class="logo-text" *ngFor="let text of logoTexts; let i = index">
+      <span>{{ text }}</span>
+      <img src="assets/angular-logo.png" alt="Angular logo">
+      <span *ngIf="i === logoTexts.length - 1">⭐️</span>
+    </div>
+  </div>
+</div>
+
 <div id="image-container">
   <img id="pokemon-bg" [src]="backgroundImage" alt="pokemon">
 </div>
