@@ -9,13 +9,13 @@
 </div>
 
 <div class="pagination">
-  <button (click)="previousPage()" [disabled]="offset === 0">Anterior</button>
-  <span>Página {{ (offset / limit) + 1 }} de {{ totalPages }}</span>
-  <button (click)="nextPage()" [disabled]="offset + limit >= totalPokemon">Siguiente</button>
+  <button class="button" (click)="previousPage()" [disabled]="offset === 0">Anterior</button>
+  <span id="page">Página {{ (offset / limit) + 1 }} de {{ totalPages }}</span>
+  <button class="button" (click)="nextPage()" [disabled]="offset + limit >= totalPokemon">Siguiente</button>
 </div>
 
 <div class="page-buttons">
-  <button *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)">
+  <button class="button" *ngFor="let page of [].constructor(totalPages); let i = index" (click)="goToPage(i + 1)">
     {{ i + 1 }}
   </button>
 </div>
