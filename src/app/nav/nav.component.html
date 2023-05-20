@@ -1,20 +1,14 @@
-<nav id="nav">
+<nav id="nav" [class.transparent]="sticky">
   <div id="logo-container">
-    <a routerLink="/" routerLinkActive="active" >
-    <img id="logo" src="assets/pokemon-logo.png" alt="pokemon logo" />
+    <a routerLink="/" routerLinkActive="active">
+      <img id="logo" src="assets/pokemon-logo.png" alt="pokemon logo" />
     </a>
   </div>
-  <ul id="links-container">
-    <li class="link">
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        >Inicio</a
-      >
-    </li>
-    <li class="link">
-      <a routerLink="/pokedex" routerLinkActive="active">Pokedex</a>
-    </li>
-    <li class="link">
-      <a routerLink="/history" routerLinkActive="active">Historia</a>
+  <div id="menu-btn" (click)="toggleMenu()">☰</div>
+  <ul id="links-container" [class.show]="menuOpen">
+    <li class="link" *ngFor="let link of links">
+      <a [routerLink]="link.url" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: link.exact }"
+        (click)="toggleMenu()">{{ link.text }}</a>
     </li>
   </ul>
 </nav>

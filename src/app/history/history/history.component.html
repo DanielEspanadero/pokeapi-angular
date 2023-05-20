@@ -1,1 +1,13 @@
-<p>history works!</p>
+<h1 id="title">Historia de los videojuegos de Pokemon</h1>
+
+        <div id="principal-background"></div>
+
+<div class="generation" *ngFor="let generation of generations">
+    <h3 class="generation-title">{{ generation.title }}</h3>
+    <p class="generation-description">{{ generation.description }}</p>
+    <div class="games-container">
+    <div class="image-container" *ngFor="let game of generation.games">
+        <img class="game-image" [src]="game.image" [alt]="game.name">
+    </div>
+    </div>
+</div>
