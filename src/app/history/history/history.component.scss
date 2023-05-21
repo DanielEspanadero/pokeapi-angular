@@ -1,12 +1,44 @@
-#title {
+$large-font-size: 3rem;
+$normal-font-size: 2rem;
+$standard-margin: 1rem 0;
+
+.center-text {
   text-align: center;
-  font-size: 3rem;
-  margin: 3rem 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.vh-padding {
   padding: 10vh;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  @extend .flex-center;
+  flex-direction: column;
+}
+
+.flex-row {
+  @extend .flex-center;
+  flex-direction: row;
+}
+
+#title {
+  @extend .center-text;
+  font-size: $large-font-size;
+  margin: $standard-margin;
+  @extend .vh-padding;
+}
+
 #principal-background {
-  width: 100%;
+  @extend .full-width;
   height: 50vh;
   background-image: url("/assets/videogames/video-games.jpeg");
   background-attachment: fixed;
@@ -14,42 +46,44 @@
 }
 
 .generation {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  .generation-title {
-    font-size: 3rem;
-    margin: 1rem 0;
+  @extend .flex-column;
+  @extend .full-width;
+}
+
+.generation-title {
+  font-size: $large-font-size;
+  margin: $standard-margin;
+}
+
+.generation-description {
+  font-size: $normal-font-size;
+  width: 60%;
+  @extend .center-text;
+  margin: $standard-margin;
+}
+
+.games-container {
+  @extend .flex-row;
+  @extend .full-width;
+}
+
+.image-container {
+  width: 33%;
+  height: 464px;
+  @extend .flex-row;
+
+  .game-image {
+    width: 90%;
+    border-radius: 1rem;
   }
-  .generation-description {
-    font-size: 2rem;
-    width: 60%;
-    text-align: justify;
-    margin: 1rem 0;
+
+  .special {
+    width: 40%;
   }
-  .games-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    .image-container {
-      width: 100%;
-      width: 33%;
-      height: 464px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      .game-image {
-        width: 90%;
-        border-radius: 1rem;
-      }
-      .special {
-        width: 60%;
-      }
+
+  @media screen and (max-width: 1500px) {
+    .special {
+      width: 60%;
     }
   }
 }
